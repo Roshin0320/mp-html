@@ -2,8 +2,8 @@
  * @fileoverview highlight 插件
  * Include prismjs (https://prismjs.com)
  */
-// const prism = require('./prism.min')
-const prism = require('prismjs');
+const prism = require('./prism.min')
+// const prism = require('prismjs');
 const config = require('./config')
 const Parser = require('../parser')
 

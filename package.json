@@ -1,10 +1,10 @@
 {
-  "name": "mp-html",
-  "version": "2.5.1",
-  "description": "小程序富文本组件",
+  "name": "r-mp-html-custom",
+  "version": "2.5.2",
+  "description": "小程序富文本组件 - forked from jin-yufeng/mp-html",
   "miniprogram": "dist/mp-weixin",
-  "repository": "https://github.com/jin-yufeng/mp-html",
-  "author": "Jin Yufeng",
+  "repository": "https://github.com/Roshin0320/mp-html",
+  "author": "Roshin",
   "license": "MIT",
   "keywords": [
     "miniprogram",
@@ -23,6 +23,7 @@
   },
   "scripts": {
     "lint": "node lint.js",
+    "publish-npm": "npm run build && npm publish",
     "lintcss": "npx stylelint src/**/*.wxss",
     "build:weixin": "gulp build --mp-weixin",
     "build:qq": "gulp build --mp-qq",
