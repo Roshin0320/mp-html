@@ -350,7 +350,7 @@ Parser.prototype.onAttrName = function (name) {
     if (name === 'data-src' && !this.attrs.src) {
       // data-src 自动转为 src
       this.attrName = 'src'
-    } else if (this.tagName === 'img' || this.tagName === 'a') {
+    } else if (this.tagName === 'img' || this.tagName === 'a' || name === 'data-checked') {
       // a 和 img 标签保留 data- 的属性，可以在 imgtap 和 linktap 事件中使用
       this.attrName = name
     } else {

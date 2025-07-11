@@ -70,5 +70,8 @@
     "through2": "^4.0.2",
     "uglify-js": "^2.8.29"
   },
-  "dependencies": {}
+  "dependencies": {
+    "marked": "^15.0.8",
+    "prismjs": "^1.30.0"
+  }
 }
