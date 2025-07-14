@@ -1,6 +1,6 @@
 {
   "name": "r-mp-html-custom",
-  "version": "2.5.3",
+  "version": "2.5.4",
   "description": "小程序富文本组件 - forked from jin-yufeng/mp-html",
   "miniprogram": "dist/mp-weixin",
   "repository": "https://github.com/Roshin0320/mp-html",
@@ -15,8 +15,20 @@
     "html"
   ],
   "standard": {
-    "globals": ["App", "Page", "Component", "wx", "requirePlugin", "uni", "plus", "weex"],
-    "envs": ["jest", "browser"]
+    "globals": [
+      "App",
+      "Page",
+      "Component",
+      "wx",
+      "requirePlugin",
+      "uni",
+      "plus",
+      "weex"
+    ],
+    "envs": [
+      "jest",
+      "browser"
+    ]
   },
   "jest": {
     "testEnvironment": "jsdom",
@@ -75,6 +87,7 @@
     "uglify-js": "^2.8.29"
   },
   "dependencies": {
+    "highlight.js": "^11.11.1",
     "marked": "^15.0.8",
     "prismjs": "^1.30.0"
   }
