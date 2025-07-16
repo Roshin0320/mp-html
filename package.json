@@ -1,6 +1,6 @@
 {
   "name": "r-mp-html-custom",
-  "version": "2.5.5",
+  "version": "2.5.14",
   "description": "小程序富文本组件 - forked from jin-yufeng/mp-html",
   "miniprogram": "dist/mp-weixin",
   "repository": "https://github.com/Roshin0320/mp-html",
