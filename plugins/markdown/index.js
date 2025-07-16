@@ -26,7 +26,10 @@ Markdown.prototype.onParse = function (node, vm) {
       this.vm._ids[node.attrs.id] = id
       node.attrs.id = id
     }
-    if (node.name === 'p' || node.name === 'table' || node.name === 'tr' || node.name === 'th' || node.name === 'td' || node.name === 'blockquote' || node.name === 'pre' || node.name === 'code') {
+    // if (node.name === 'p' || node.name === 'table' || node.name === 'tr' || node.name === 'th' || node.name === 'td' || node.name === 'blockquote' || node.name === 'pre' || node.name === 'code') {
+    //   node.attrs.class = `md-${node.name} ${node.attrs.class || ''}`
+    // }
+    if (node.name?.trim()) {
       node.attrs.class = `md-${node.name} ${node.attrs.class || ''}`
     }
   }
