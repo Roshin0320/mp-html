@@ -14,7 +14,7 @@ function Highlight (vm) {
 Highlight.prototype.onParse = function (node, vm) {
   if (node.name === 'pre') {
     if (vm.options.editable) {
-      node.attrs.class = (node.attrs.class || '') + ' hl-pre'
+      node.attrs.class = (node.attrs.class || '') + ' hl-pre hl-pre-text'
       return
     }
     let i
@@ -52,8 +52,8 @@ Highlight.prototype.onParse = function (node, vm) {
           // 加一层 pre 保留空白符
           '<pre>' + prism.highlight(text, prism.languages[lang], lang).replace(/token /g, 'hl-') + '</pre>'))[0].children
       }
-      node.attrs.class = 'hl-pre'
-      code.attrs.class = 'hl-code'
+      node.attrs.class = `hl-pre pl-${lang} ${node.attrs.class || ''}`
+      code.attrs.class = `hl-code pl-${lang} ${code.attrs.class || ''}`
       if (config.showLanguageName) {
         node.children.push({
           name: 'div',
