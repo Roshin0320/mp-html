@@ -228,11 +228,8 @@ Parser.prototype.expose = function () {
  * @returns {Boolean} 是否要移除此标签
  */
 Parser.prototype.hook = function (node) {
-  if (this.options.properties.beforeParse === 'function') {
-    const result = this.options.properties.beforeParse(node, this) 
-    if (result === false) {
-      return false
-    }
+  if (this.options.properties.beforeParse && this.options.properties.beforeParse(node, this) === false) {
+    return false
   }
   for (let i = this.plugins.length; i--;) {
     if (this.plugins[i].onParse && this.plugins[i].onParse(node, this) === false) {

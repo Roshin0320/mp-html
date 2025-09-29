@@ -96,40 +96,40 @@ body {
 }
 
 /* GFM 警告块标题 */
-.blockquote_title {
+.blockquote-title {
   display: flex;
   gap: 0.5em;
   align-items: center;
   margin-bottom: 0.5em;
 }
 
-.blockquote_title_note {
-  color: #478be6;
+.blockquote-title-note {
+  color: #4d80f0;
 }
 
-.blockquote_title_tip {
-  color: #57ab5a;
+.blockquote-title-tip {
+  color: #34d19d;
 }
 
-.blockquote_title_info {
-  color: #93c5fd;
+.blockquote-title-info {
+  color: #909399;
 }
 
-.blockquote_title_important {
-  color: #986ee2;
+.blockquote-title-important {
+  color: #8268de;
 }
 
-.blockquote_title_warning {
-  color: #c69026;
+.blockquote-title-warning {
+  color: #f0883a;
 }
 
-.blockquote_title_caution {
-  color: #e5534b;
+.blockquote-title-caution {
+  color: #fa4350;
 }
 
 /* 代码块 */
 .md-pre,
-.code_pre {
+.code-pre {
   padding: 1em;
   margin: 10px 8px;
   overflow-x: auto;
@@ -199,7 +199,7 @@ body {
   transform-origin: 0 0;
 }
 
-.block_katex {
+.block-katex {
   max-width: 100%;
   padding: 0.5em 0;
   overflow-x: auto;
@@ -230,11 +230,11 @@ body {
 
 .md-a,
 .link {
-  color: #576b95;
+  color: var(--md-primary-color);
 }
 
-.wx_link {
-  color: #576b95;
+.wx-link {
+  color: var(--md-primary-color);
   text-decoration: none;
 }
 
@@ -288,24 +288,24 @@ body {
   text-align: center;
 }
 
-.inline_katex {
+.inline-katex {
   max-width: 100%;
   overflow-x: auto;
 }
 
-.markup_highlight {
+.markup-highlight {
   padding: 2px 4px;
   color: #fff;
   background-color: var(--md-primary-color);
   border-radius: 2px;
 }
 
-.markup_underline {
+.markup-underline {
   text-decoration: underline;
   text-decoration-color: var(--md-primary-color);
 }
 
-.markup_wavyline {
+.markup-wavyline {
   text-decoration: underline;
   text-decoration-thickness: 2px;
   text-decoration-color: var(--md-primary-color);

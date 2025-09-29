@@ -6,29 +6,12 @@ function ucfirst(str) {
 }
 
 const styles = {
-  blockquote_title_note: {
-    color: `#478be6`,
-  },
-
-  blockquote_title_tip: {
-    color: `#57ab5a`,
-  },
-
-  blockquote_title_info: {
-    color: `#93c5fd`,
-  },
-
-  blockquote_title_important: {
-    color: `#986ee2`,
-  },
-
-  blockquote_title_warning: {
-    color: `#c69026`,
-  },
-
-  blockquote_title_caution: {
-    color: `#e5534b`,
-  },
+  note_color: `#4d80f0`,
+  tip_color: `#34d19d`,
+  info_color: `#909399`,
+  important_color: `#8268de`,
+  warning_color: `#f0883a`,
+  caution_color: `#fa4350`,
 };
 
 /**
@@ -51,10 +34,10 @@ export function markedAlert() {
       title: matchedVariant.title ?? ucfirst(variantType),
       titleClassName: `${className}-title`,
       fromContainer,
-      wrapperClassName: `blockquote blockquote_${variantType}`,
-      titleClassName: `blockquote_title blockquote_title_${variantType}`,
-      contentClassName: `blockquote_p blockquote_p_${variantType}`,
-      titleStyle: { ...styles?.[`blockquote_title_${variantType}`] },
+      wrapperClassName: `blockquote blockquote-${variantType}`,
+      titleClassName: `blockquote-title blockquote-title-${variantType}`,
+      contentClassName: `blockquote-p blockquote-p-${variantType}`,
+      titleStyle: { ...styles },
     };
   }
 
@@ -69,7 +52,7 @@ export function markedAlert() {
     if (!withoutStyle) {
       tmpl += meta.icon.replace(
         "<svg",
-        `<svg style="fill: ${meta.titleStyle?.color ?? "inherit"}"`
+        `<svg style="fill: ${meta.titleStyle?.[`${meta.variant}_color`] ?? "inherit"}"`
       );
     }
     tmpl += meta.title;
