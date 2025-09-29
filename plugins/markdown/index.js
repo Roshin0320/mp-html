@@ -6,16 +6,16 @@
 // const marked = require('./marked.min')
 // import { marked } from "./marked.umd'
 import { marked } from './marked.esm'
-// import { markedAlert } from './extensions/alert'
-// import { markedMarkup } from './extensions/markup'
-// import { markedToc } from './extensions/toc'
-// import { markedFootnotes } from './extensions/footnotes'
+import { markedAlert } from './extensions/alert'
+import { markedMarkup } from './extensions/markup'
+import { markedToc } from './extensions/toc'
+import { markedFootnotes } from './extensions/footnotes'
 // import { marked } from 'marked'
 let index = 0
-// marked.use(markedAlert())
-// marked.use(markedMarkup())
-// marked.use(markedToc())
-// marked.use(markedFootnotes())
+marked.use(markedAlert())
+marked.use(markedMarkup())
+marked.use(markedToc())
+marked.use(markedFootnotes())
 
 function Markdown (vm) {
   this.vm = vm

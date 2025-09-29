@@ -187,18 +187,14 @@ function Parser (vm) {
  * @param {String} content 要解析的文本
  */
 Parser.prototype.parse = function (content) {
-  let result = content
-  if (this.options.properties.beforeUpdate === 'function') {
-    result = this.options.properties.beforeUpdate(result, config) 
-  }
   // 插件处理
   for (let i = this.plugins.length; i--;) {
     if (this.plugins[i].onUpdate) {
-      result = this.plugins[i].onUpdate(result, config) || content
+      content = this.plugins[i].onUpdate(content, config) || content
     }
   }
 
-  new Lexer(this).parse(result)
+  new Lexer(this).parse(content)
   // 出栈未闭合的标签
   while (this.stack.length) {
     this.popNode()
@@ -228,9 +224,6 @@ Parser.prototype.expose = function () {
  * @returns {Boolean} 是否要移除此标签
  */
 Parser.prototype.hook = function (node) {
-  if (this.options.properties.beforeParse && this.options.properties.beforeParse(node, this) === false) {
-    return false
-  }
   for (let i = this.plugins.length; i--;) {
     if (this.plugins[i].onParse && this.plugins[i].onParse(node, this) === false) {
       return false
