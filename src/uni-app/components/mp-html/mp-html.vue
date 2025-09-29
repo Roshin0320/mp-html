@@ -29,6 +29,8 @@
  * @property {Boolean} set-title 是否将 title 标签的内容设置到页面标题
  * @property {Boolean} show-img-menu 是否允许图片被长按时显示菜单
  * @property {Object} tag-style 标签的默认样式
+ * @property {Function} beforeUpdate 更新 html 内容时触发
+ * @property {Function} beforeParse 解析到一个标签时触发
  * @property {Boolean | Number} use-anchor 是否使用锚点链接
  * @event {Function} load dom 结构加载完毕时触发
  * @event {Function} ready 所有图片加载完毕时触发
@@ -100,6 +102,8 @@ export default {
       default: true
     },
     tagStyle: Object,
+    beforeUpdate: Function,
+    beforeParse: Function,
     useAnchor: [Boolean, Number]
   },
   // #ifdef VUE3
